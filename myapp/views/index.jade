@@ -1,0 +1,69 @@
+extends layout
+
+block content
+  #home.section
+    .container
+      .row.text-center
+        h1 
+          | 我是 WEBBER
+          br 
+          | 而我也是一個 前端網頁 的 Developer
+        a.btn.btn-default.btn-lg(href="#profile") 瞭解更多
+  #profile.section.profile-top.bg-info
+    .container
+      .row.text-center
+        h1 我很高興你的拜訪
+        h3 我設計了這個網站，你可以從這裡了解我，所以慢慢享受吧～
+        img.img-circle(src="http://graph.facebook.com/bird23074035/picture?width=180")
+  .section.profile-bottom
+    .container
+      .row.text-center
+        .col-md-4
+          span.glyphicon.glyphicon-heart.img-circle
+          h3 為什麼我喜歡程式
+          h4.text-muted 我喜歡用程式來消磨我的時間，我很享受結果出來的那一個瞬間。
+        .col-md-4
+          span.glyphicon.glyphicon-music.img-circle
+          h3 為什麼我愛音樂
+          h4.text-muted 他能讓我更加放鬆，聽著這些音符發出來的聲音能讓我沈澱一些事情。
+        .col-md-4
+          span.glyphicon.glyphicon-apple.img-circle
+          h3 蘋果是一個好東西
+          h4.text-muted 恩..我指的是” 一天一蘋果，醫生遠離我 “這句話。
+  #skills.section.bg-info
+    .container
+      .row
+        h1 我的技能_
+        .col-md-6
+          h3.text-muted 
+            |我的興趣源自於學校 homepage 的課程，讓我覺得原來網路世界是如此的有趣，慢慢琢磨到至今。
+        .col-md-6
+          .progress
+            .progress-bar.progress-bar-success(role="progressbar" style="width: 70%;")
+              | HTML 7/10
+          .progress
+            .progress-bar.progress-bar-success(role="progressbar" style="width: 70%;")
+              | CSS 7/10
+          .progress
+            .progress-bar.progress-bar-success(role="progressbar" style="width: 70%;")
+              | JS 7/10
+  #contact.section
+    .container
+      .row.text-center
+        h1 打招呼
+        h4.text-muted 如果你有任何問題，我會回答你
+        form.form-horizontal(action="/contact" method="post" role="form")
+          .col-md-1
+          .col-md-3
+            .form-group
+              .col-md-12
+                input.form-control(name="name" type="text" placeholder="Name")
+            .form-group
+              .col-md-12
+                input.form-control(name="email" type="email" placeholder="Email")
+          .col-md-6
+            .form-group
+              .col-md-12
+                textarea.form-control(name="messqge" rows="4" placeholder="Message" required)
+          .col-md-10
+            input.btn.btn-success.pull-right(type="submit" value="送出")
